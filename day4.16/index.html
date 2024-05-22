@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>第五人格 - 古董商戚十一角色介绍</title>
+    <style>
+        body {
+            background-image: url('3.jpg');          
+			background-size: cover;
+			background-repeat: no-repeat;
+		    background-attachment: fixed;
+			background-color: rgba(255, 255, 255, 0.2);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-position: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.4); 
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: rgba(201, 221, 34, 0.7);
+            text-align: center;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        .content {
+			background-color: rgba(255, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text-content {
+			font-family: '楷体', sans-serif;
+            width: calc(50% - 10px); 
+            margin-bottom: 20px;
+            background-color: rgba(14, 184, 58, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+		.textleft{
+			font-family: '楷体', sans-serif;
+			color: rgba(0, 188, 18, 0.8);
+		}
+        .role-image {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+		.rightsa{
+		 position: absolute; 
+		    bottom: 0px; 
+		    right: 0; 
+		    width: 300px; 
+		    height: 200px; 
+		    background-color: rgba(120,146,98, 0);
+			border-radius: 10px;
+			color: rgba(192,235,215,0.8,);
+		}
+		.skill {
+			  font-family: '华文行楷', sans-serif;
+		      color: purple; 
+		      font-size: 52px;
+			  color: rgb(42, 221, 156);
+		      text-align: center;
+			  }
+        .image-left {
+			width: 400px;
+			height: 530px;
+        }
+        .role-image.right {
+			position: relative;
+			top: 400px;
+			right: 80px;;
+            transform: translateX(100%);
+        }
+        .role-image.show {
+            transform: translateX(0);
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            text-indent: 2em;
+            font-size: 1.1em;
+        }
+        .right-bottom {
+			margin-top: 200px;
+			text-shadow: 1px 1px 2px rgba(0,0,0.2);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: right;
+			background-color: rgba(120,146,98, 0.3);
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .role-image {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            var            var scrollValue = window.scrollY;
+            var leftImage = document.querySelector('.role-image.left');
+            var rightImage = document.querySelector('.role-image.right');
+            var leftText = document.querySelector('.text-content.left');
+            var rightText = document.querySelector('.text-content.right');
+
+            if (scrollValue >= leftText.offsetTop - window.innerHeight / 2 && scrollValue < rightText.offsetTop - window.innerHeight / 2) {
+                leftImage.classList.add('show');
+            } else {
+                leftImage.classList.remove('show');
+            }
+
+            if (scrollValue >= rightText.offsetTop - window.innerHeight / 2) {
+                rightImage.classList.add('show');
+            } else {
+                rightImage.classList.remove('show');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>第五人格 - 古董商戚十一角色介绍</h1>
+        <div class="content">
+            <div class="text-content left">
+                <p class="textleft">戚十一，原名萧家小女儿，是《第五人格》中的一位女性求生者角色。在一场灾难中，她成为了家族唯一的幸存者。为了复仇，她学习武艺，但最终发现现实世界并非如话本中的英雄故事那样善恶有报。复仇失败后，她的身份被暴露，从而开始了漫长的逃亡生涯。她改名为“戚十一”，试图适应普通人的生活，但过去仍然紧随其后。</p>
+				<p class="textleft">她无悔</p>
+				<p class="textleft">她只为她的家族一雪前耻</p>
+				<p class="textleft">她无怨</p>
+				<p class="textleft">她只为她的世界锄强扶弱</p>
+				<p class="textleft">所求不得园——</p>
+				<p class="textleft">欲求净土，少使贪嗔</p>
+				<p class="textleft">莫要回头看——</p>
+				<p class="textleft">尽弃前嫌，安度此生</p>
+            </div>
+            <img src="1.jpg" alt="戚十一角色形象左侧" class="image-left">
+            <div class="text-content right">
+				<p class="skill">“若善恶无报，</p>
+				<p class="skill">静守己心有什么用”</p>
+            </div>
+			<div class="rightsa">
+			 <p class="right-bottom">戚十一的技能设计体现了她的武艺和智慧。她的主要技能包括外在特质-身轻如燕、外在特质-嫉恶、外在特质-独行、外在特质-藏锋和外在特质-止戈。这些技能使她在游戏中既能够有效地与监管者对抗，又能够巧妙地逃脱追捕。</p>
+			</div>
+            <img src="2.jpg"alt="戚十一角色形象右侧" class="role-image right">
+        </div>
+    </div>
+</body>
+</html>
